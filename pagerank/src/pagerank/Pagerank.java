@@ -17,5 +17,6 @@ public class Pagerank {
         // TODO code application logic here
 		
 		System.out.println("Hello");
+		System.out.println("Other test");
     }
 }
