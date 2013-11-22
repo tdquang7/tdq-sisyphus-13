@@ -16,6 +16,6 @@ public class Pagerank {
     public static void main(String[] args) {
         // TODO code application logic here
 		
-		out.println("Hello");
+		System.out.println("Hello");
     }
 }
