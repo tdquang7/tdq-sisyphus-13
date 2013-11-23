@@ -49,7 +49,7 @@ public class Saugmentdegree extends Sisyphus{
 
         @Override
         public void UpdateState(GraphNodeInfo info, Object newState) {    
-            
+            // Nothing to do
         }       
         
         @Override
