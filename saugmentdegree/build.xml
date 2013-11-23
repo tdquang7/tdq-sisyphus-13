@@ -62,4 +62,14 @@
     nbproject/build-impl.xml file. 
 
     -->
+    <target name="-post-jar">
+        <jar destfile="sad.jar">            
+            <zipfileset src="dist/saugmentdegree.jar"/>
+            <zipfileset src="dist/lib/sisyphus.jar"/>
+            <manifest>
+                <attribute name="Main-Class" value="saugmentdegree.Saugmentdegree"/>
+                <attribute name="Class-Path" value="${mf.classpath}"/>
+            </manifest>
+        </jar>
+    </target>
 </project>
