@@ -5,10 +5,8 @@
 package augmentdegree;
 
 import java.io.IOException;
-import java.net.URI;
 import java.util.ArrayList;
 import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.filecache.DistributedCache;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
@@ -45,7 +43,8 @@ public class AugmentDegree {
     
     public static class AdReducer1 extends Reducer<Text, GraphNodeInfo, Text, GraphNodeInfo>{
         @Override
-	protected void reduce (Text key, Iterable <GraphNodeInfo> messages, Context context) throws IOException, InterruptedException {
+	protected void reduce (Text key, Iterable <GraphNodeInfo> messages, Context context) 
+                throws IOException, InterruptedException {
             
             GraphNodeInfo node = new GraphNodeInfo();
             // 1. Set initial state: none
