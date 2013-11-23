@@ -1,12 +1,10 @@
-package tdq.sisyphus;
+package sisyphus;
 
-import com.sun.org.apache.xml.internal.utils.StringComparable;
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 import java.util.ArrayList;
 import org.apache.hadoop.io.WritableComparable;
-import sun.security.x509.IssuerAlternativeNameExtension;
 
 public class GraphNodeInfo implements WritableComparable {
     private String vertexID;
