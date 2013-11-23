@@ -136,7 +136,11 @@ public class Saugmentdegree extends Sisyphus{
         Sisyphus framework = new Sisyphus();
         framework.RunAlgo(args, "AD1", Sisyphus.class, ADCore1.class);
         
+        String[] newoutput = new String[2];
+        newoutput[0] = args[1];
+        newoutput[1] = args[1] + "1";
+        
         framework = new Sisyphus();
-        framework.RunAlgo(args, "AD2", Sisyphus.class, ADCore2.class);
+        framework.RunAlgo(newoutput, "AD2", Sisyphus.class, ADCore2.class);
     }
 }
