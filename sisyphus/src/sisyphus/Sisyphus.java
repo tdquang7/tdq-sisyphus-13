@@ -94,15 +94,7 @@ public class Sisyphus {
 	protected void reduce (Text key, Iterable <GraphNodeInfo> messages, Context context) throws IOException, InterruptedException {
             GraphNodeInfo node = new GraphNodeInfo();
             f.SetInitialState(node);
-            node.setVertexID(key.toString());
-            
-            
-//            // Test coi chuyen gi da xay ra, dung identity
-//            for(GraphNodeInfo f: messages)
-//            {
-//                context.write(key, f);
-//            }
-//            
+            node.setVertexID(key.toString());  
             
             // Accumulate messages
             ArrayList<String> messInfos = new ArrayList();
