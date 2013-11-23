@@ -2,20 +2,19 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package tdq.pr;
+package spagerank;
 import java.util.ArrayList;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.Reducer.Context;
-import tdq.sisyphus.GraphNodeInfo;
-import tdq.sisyphus.Sisyphus;
-import tdq.sisyphus.*;
-
+import sisyphus.GraphNodeInfo;
+import sisyphus.Sisyphus;
+import sisyphus.*;
 /*
  * @author tdquang
  * Implement pagerank using proposed framework Sisyphus
  */
-public class PageRankSisyphus extends Sisyphus{
+public class Spagerank extends Sisyphus{
     public static class PRCoreFunction implements CoreFunction
     {
         @Override
