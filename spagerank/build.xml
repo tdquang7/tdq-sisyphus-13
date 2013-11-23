@@ -65,7 +65,7 @@
     <target name="-post-jar">
         <jar destfile="sPageRank.jar">            
             <zipfileset src="dist/spagerank.jar"/>
-            <zipfileset src="/home/q/Desktop/src/sisyphus/dist/sisyphus.jar"/>
+            <zipfileset src="dist/lib/sisyphus.jar"/>
             <manifest>
                 <attribute name="Main-Class" value="spagerank.Spagerank"/>
                 <attribute name="Class-Path" value="${mf.classpath}"/>
