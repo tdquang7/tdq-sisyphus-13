@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package tdq.sisyphus;
+package sisyphus;
 
 import java.io.DataOutputStream;
 import java.io.IOException;
