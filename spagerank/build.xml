@@ -62,4 +62,14 @@
     nbproject/build-impl.xml file. 
 
     -->
+    <target name="-post-jar">
+        <jar destfile="sPageRank.jar">            
+            <zipfileset src="dist/spagerank.jar"/>
+            <zipfileset src="/home/q/Desktop/src/sisyphus/dist/sisyphus.jar"/>
+            <manifest>
+                <attribute name="Main-Class" value="spagerank.Spagerank"/>
+                <attribute name="Class-Path" value="${mf.classpath}"/>
+            </manifest>
+        </jar>
+    </target>
 </project>
