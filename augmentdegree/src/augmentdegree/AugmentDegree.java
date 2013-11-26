@@ -27,12 +27,13 @@ public class AugmentDegree {
             // 1. Set initial state: Doing nothing
             context.write(vertexID, node); // 2. Release the graph structure    
             
+            GraphNodeInfo message = new GraphNodeInfo();
+            message.setTypeIsMessage();
+            
             // 3. Extract messages
             for(String edge: node.getEdges())
             {
-                GraphNodeInfo message = new GraphNodeInfo();
                 message.setVertexID(edge); // Vertex needed to be added degree
-                message.setTypeIsMessage();
                 message.setState(edge + ", " + vertexID.toString());
                 
                 // 4. Release all these messages
@@ -73,18 +74,17 @@ public class AugmentDegree {
                 }
             }
             
-            // Combine infos            
+            // Combine infos      
+            GraphNodeInfo getM = new GraphNodeInfo();
+            getM.setTypeIsMessage();
+            
             for(String data: messInfos)
             {
                 String[] parts = data.split(", ");
                 String v = parts[1];
                 
-                GraphNodeInfo getM = new GraphNodeInfo();
                 getM.setVertexID(v);
-                
-                String nodeDegree = Integer.toString(node.getEdges().size());
-                getM.setState(key.toString() + ", " + nodeDegree);
-                getM.setTypeIsMessage();
+                getM.setState(key.toString() + ", " + Integer.toString(node.getEdges().size()));
                 
                 context.write(new Text(v), getM);
             }
